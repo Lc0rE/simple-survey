@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/surveyStyle.css">
 
     <!-- Custom JS -->
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
 
 </head>
 <body>
@@ -53,22 +53,5 @@
 
     </div>
 </div>
-
-<script>
-    var rightArrow = $(".right-arrow");
-    var leftArrow = $(".left-arrow");
-
-    $(".right-container > button").click(function() {
-        $(".right-container").find(".blue").removeClass("blue");
-
-        $(this).toggleClass("blue");
-
-        $(rightArrow).removeAttr("disabled");
-        $(rightArrow).addClass("blue");
-
-    });
-
-
-</script>
 </body>
 </html>

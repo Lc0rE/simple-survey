@@ -1,0 +1,44 @@
+body {
+    height: 100%;
+}
+
+.ui.container {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.main-container {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #D4D4D5, 0 0 0 1px #D4D4D5;
+}
+
+.left-container {
+    width: 50%;
+    padding: 10px;
+}
+
+.left-container > h2 {
+    color: #2185D0;
+}
+
+.right-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.right-container > button {
+    margin-bottom: 15px !important;
+}
+
+.navigation-controllers {
+    text-align: right;
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lantech's Survey</title>
+
+    <!--jQuery-->
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <!--Semantic-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
+
+    <!--Custom Style-->
+    <link rel="stylesheet" href="css/surveyStyle.css">
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+<div class="ui container">
+    <div class="main-container">
+        <div class="left-container">
+            <h2>1 / 20</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lobortis magna vel ipsum eleifend, sed
+                pellentesque neque finibus.</p>
+        </div>
+
+        <div class="right-container">
+            <button class="ui button survey-button">
+                Completamente in disaccordo
+            </button>
+            <button class="ui button survey-button">
+                Parzialmente in disaccordo
+            </button>
+            <button class="ui button survey-button">
+                Parzialmente in accordo
+            </button>
+            <button class="ui button survey-button">
+                Completamente in accordo
+            </button>
+        </div>
+    </div>
+    <br>
+    <div class="navigation-controllers">
+        <button class="ui icon button left-arrow">
+            <i class="ui icon arrow left"></i>
+        </button>
+        <button class="ui icon button right-arrow" disabled>
+            <i class="ui icon arrow right"></i>
+        </button>
+
+    </div>
+</div>
+
+<script>
+    var rightArrow = $(".right-arrow");
+    var leftArrow = $(".left-arrow");
+
+    $(".right-container > button").click(function() {
+        $(".right-container").find(".blue").removeClass("blue");
+
+        $(this).toggleClass("blue");
+
+        $(rightArrow).removeAttr("disabled");
+        $(rightArrow).addClass("blue");
+
+    });
+
+
+</script>
+</body>
+</html>

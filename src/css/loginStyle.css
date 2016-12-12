@@ -1,0 +1,32 @@
+body {
+    background-color: #1B1C1D;
+    padding-top: 50px;
+}
+
+.ui.text.container {
+    width: 400px;
+}
+
+.ui.container.text-container {
+    width: 700px !important;
+}
+
+.ui.form .field > label {
+    color: white;
+}
+
+.ui.checkbox > label, .ui.checkbox > label:hover, .ui.checkbox > label::selection {
+    color: white;
+}
+
+.ui.header {
+    color: white;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 40%;
+    margin-bottom: 50px;
+}

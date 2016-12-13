@@ -31,12 +31,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="surveyStyle.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="surveyStyle.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/surveyStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="36">
+              <caret line="3" column="252" lean-forward="false" selection-start-line="3" selection-start-column="252" selection-end-line="3" selection-end-column="252" />
+              <folding>
+                <element signature="e#78#307#2" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,7 +53,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginStyle.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loginStyle.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/loginStyle.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
@@ -90,9 +92,9 @@
         <option value="$PROJECT_DIR$/src/css/surveyStyle.css" />
         <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css/surveyStyle.css" />
         <option value="$PROJECT_DIR$/css/loginStyle.css" />
         <option value="$PROJECT_DIR$/login.html" />
+        <option value="$PROJECT_DIR$/css/surveyStyle.css" />
       </list>
     </option>
   </component>
@@ -263,12 +265,12 @@
       <option name="presentableId" value="Default" />
       <updated>1481539092585</updated>
       <workItem from="1481539094457" duration="2214000" />
-      <workItem from="1481548005677" duration="11105000" />
+      <workItem from="1481548005677" duration="11228000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13319000" />
+    <option name="totallyTimeSpent" value="13442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="840" y="22" width="840" height="1024" extended-state="0" />
@@ -391,10 +393,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/surveyStyle.css">
+    <entry file="file://$PROJECT_DIR$/css/loginStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        <state relative-caret-position="198">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -407,11 +409,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/loginStyle.css">
+    <entry file="file://$PROJECT_DIR$/css/surveyStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="36">
+          <caret line="3" column="252" lean-forward="false" selection-start-line="3" selection-start-column="252" selection-end-line="3" selection-end-column="252" />
+          <folding>
+            <element signature="e#78#307#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

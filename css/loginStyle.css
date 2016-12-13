@@ -1,14 +1,34 @@
 body {
-    background-color: #1B1C1D;
-    padding-top: 50px;
+    /*background-color: #1B1C1D;*/
+    background-image: url("../img/cloud.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
 
-.ui.text.container {
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.ui.container {
+    height: auto;
     width: 400px;
 }
 
+
 .ui.container.text-container {
     width: 700px !important;
+}
+
+.ui.form {
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
 }
 
 .ui.form .field > label {

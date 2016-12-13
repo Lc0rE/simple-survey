@@ -1,5 +1,6 @@
 body {
     height: 100%;
+    background: #fefefe;
 }
 
 .ui.container {
@@ -16,6 +17,7 @@ body {
     border: none;
     border-radius: .28571429rem;
     box-shadow: 0 1px 3px 0 #D4D4D5, 0 0 0 1px #D4D4D5;
+    background: white;
 }
 
 .left-container {
@@ -42,3 +44,8 @@ body {
     text-align: right;
 }
 
+@media screen and (min-width: 1200px) {
+    .ui.container {
+        width: 900px;
+    }
+}

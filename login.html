@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Login CS_CRM</title>
+    <title>Login Lantech's Survey</title>
 
     <!--jQuery-->
     <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -17,31 +17,34 @@
 
 </head>
 <body>
-<div class="ui text container main-container">
-    <img src="img/icon.png" alt="logo_cscrm.png">
-    <!--<div class="ui header">Survey gradimento azienda 2016</div>-->
-    <form class="ui form" method="post">
-        <div class="field">
-            <label for="username">Username</label>
-            <input name="username" id="username" type="text" placeholder="Username">
-        </div>
-        <div class="field">
-            <label for="password">Password</label>
-            <input id="password" type="password" name="password" placeholder="Password"/>
-        </div>
-        <button class="ui button basic positive" name="submit" type="submit" id="submit">Login</button>
+<div class="main-container">
+    <div class="ui container main-container">
+        <!--<img src="img/icon.png" alt="logo_cscrm.png">-->
+        <!--<div class="ui header">Survey gradimento azienda 2016</div>-->
+        <form class="ui form" method="post">
+            <h2 class="ui header">Lantech's Survey 2016</h2>
+            <div class="field">
+                <label for="username">Username</label>
+                <input name="username" id="username" type="text" placeholder="Username">
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" placeholder="Password"/>
+            </div>
+            <button class="ui button fluid blue" name="submit" type="submit" id="submit">Compila la survey</button>
+        </form>
+    </div>
+    <div class="ui container text-container">
         <br>
         <br>
-    </form>
-</div>
-<div class="ui container text-container">
-    <br>
-    <br>
-    <br>
-    <div class="ui ignored positive message">
-        La compilazione della survey sul gradimento dell'azienda è anonima.
+        <br>
+        <div class="ui ignored blue message">
+            La compilazione della survey sul gradimento dell'azienda è anonima. Le credenziali di accesso verranno utilizzate solamente
+            al fine di garantire la quialità del sontaggio tramite l'assegnazione univoca di credenziali generate randomicamente.
+        </div>
     </div>
 </div>
+
 
 </body>
 </html>

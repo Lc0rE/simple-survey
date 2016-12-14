@@ -17,6 +17,25 @@ $.getJSON('../data/example.json', function (data) {
 
 The most of the features should come in the future days.
 
+### Structure
+```
+.
+├── README.md
+├── css
+│   ├── loginStyle.css
+│   └── surveyStyle.css
+├── data
+│   └── example.json
+├── img
+│   ├── meeting_edit.jpg
+│   ├── mockup1.jpg
+│   └── mockup2.jpg
+├── index.html
+├── js
+│   ├── load.js
+│   └── script.js
+└── login.html
+```
 ### To DO
 - Authentication system
 - Credential cryptography

@@ -20,6 +20,9 @@ $(document).ready(function () {
 
       showCounter.empty();
       showCounter.append(click+1 + " / " + length);
+
+      $(".right-container").find(".blue").removeClass("blue");
+
     });
   });
 
@@ -34,6 +37,8 @@ $(document).ready(function () {
 
       showCounter.empty();
       showCounter.append(click+1 + " / " + length);
+
+      $(".right-container").find(".blue").removeClass("blue");
     });
   })
 });

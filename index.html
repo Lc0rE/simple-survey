@@ -16,14 +16,15 @@
 
     <!-- Custom JS -->
     <script src="./js/script.js"></script>
+    <script src="./js/load.js"></script>
 
 </head>
 <body>
 <div class="ui container">
     <div class="main-container">
         <div class="left-container">
-            <h2>1 / 20</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lobortis magna vel ipsum eleifend, sed
+            <h2 id="show-counter"></h2>
+            <p id="show-data">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lobortis magna vel ipsum eleifend, sed
                 pellentesque neque finibus.</p>
         </div>
 
@@ -38,9 +39,9 @@
     <br>
     <div class="navigation-controllers">
         <button class="ui icon button left-arrow">
-            <i class="ui icon arrow left"></i>
+            <i class="ui icon arrow left" id="prev-data"></i>
         </button>
-        <button class="ui icon button right-arrow" disabled>
+        <button class="ui icon button right-arrow" disabled id="next-data">
             <i class="ui icon arrow right"></i>
         </button>
 

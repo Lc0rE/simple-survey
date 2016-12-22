@@ -6,15 +6,18 @@ $(document).ready(function() {
 			var rightArrow = $(".right-arrow");
 			var leftArrow = $(".left-arrow");
 
+			// GET call to the JSON file to retrieve number of questions
 			$.getJSON('../data/example.json', function(data) {
 				var length = data.items.length;
 				showCounter.append(question + 1 + " / " + length);
 			});
 
+			// Disable the back button if it's the first question
       if(question == 0) {
         $('#prev-data').prop('disabled', true);
       }
 
+			// To be sure that just 1 answer is selected
 	    $(".right-container > button").click(function() {
 	        $(".right-container").find(".blue").removeClass("blue");
 
@@ -26,7 +29,7 @@ $(document).ready(function() {
 	    });
 
 
-
+			// Manage click events on next button
 			$('#next-data').click(function() {
 				question++;
 				$.getJSON('../data/example.json', function(data) {
@@ -58,10 +61,10 @@ $(document).ready(function() {
             $('#prev-data').prop('disabled', false);
           }
 
-
 				});
 			});
 
+			// Manage click events on back button
 			$('#prev-data').click(function() {
 				question--;
 				$.getJSON('../data/example.json', function(data) {
@@ -92,6 +95,7 @@ $(document).ready(function() {
 			});
 
 
+			// Insert the answer in an object
 			$(".survey-button").click(function() {
 				var id = this.id;
 				Answers[question] = id;
@@ -99,6 +103,7 @@ $(document).ready(function() {
 				console.log(Answers);
 			});
 
+			// Function to check if the answer object contains an answer for that question
       function hasAnswer(button, questionNumber, answersObject) {
         if (answersObject.hasOwnProperty(questionNumber)) {
           return true;
@@ -107,6 +112,7 @@ $(document).ready(function() {
         }
       }
 
+			// Function to check which answer was previously selected
       function checkAnswer(button, questionNumber, answersObject) {
 				var id = button.id;
 

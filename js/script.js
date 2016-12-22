@@ -5,12 +5,38 @@ $(document).ready(function() {
 			var Answers = {};
 			var rightArrow = $(".right-arrow");
 			var leftArrow = $(".left-arrow");
+			var reviewButton = $("#review-data");
 
-			// GET call to the JSON file to retrieve number of questions
-			$.getJSON('../data/example.json', function(data) {
-				var length = data.items.length;
-				showCounter.append(question + 1 + " / " + length);
-			});
+			// GET function to read the JSON file
+			function getData() {
+				return $.ajax({
+					url: '../data/example2.json',
+					type: 'GET'
+				});
+			}
+
+			// Function to insert the counter
+			function insertCounter(data) {
+					var length = data.items.length;
+					showCounter.append(question + 1 + " / " + length);
+			}
+
+			function getLastQuestion(data, questionNumber) {
+
+					var length = data.items.length;
+					var number = questionNumber+1;
+					console.log("element " + number + " of: " + length);
+					if (number == length) {
+						console.log("finito!");
+						rightArrow.css("display", "none");
+						reviewButton.css("display", "inline-block");
+						reviewButton.prop("disabled", false);
+					}
+			}
+
+			// Callback to insert the counter
+			getData().done(insertCounter);
+
 
 			// Disable the back button if it's the first question
       if(question == 0) {
@@ -25,6 +51,7 @@ $(document).ready(function() {
 
 	        $(rightArrow).removeAttr("disabled");
 	        $(rightArrow).addClass("blue");
+	        $(reviewButton).addClass("blue");
 
 	    });
 
@@ -32,7 +59,7 @@ $(document).ready(function() {
 			// Manage click events on next button
 			$('#next-data').click(function() {
 				question++;
-				$.getJSON('../data/example.json', function(data) {
+				$.getJSON('../data/example2.json', function(data) {
 					var items = data.items[question].paragraph;
 					var length = data.items.length;
 
@@ -46,6 +73,7 @@ $(document).ready(function() {
 					showCounter.append(question + 1 + " / " + length);
 
 					$(".right-container").find(".blue").removeClass("blue");
+					$(reviewButton).removeClass("blue");
 
 					$('#next-data').removeClass("blue");
 					$('#next-data').prop('disabled', true);
@@ -61,13 +89,16 @@ $(document).ready(function() {
             $('#prev-data').prop('disabled', false);
           }
 
+					// Checking if it is the last item
+					getData().done(getLastQuestion(data,question));
+
 				});
 			});
 
 			// Manage click events on back button
 			$('#prev-data').click(function() {
 				question--;
-				$.getJSON('../data/example.json', function(data) {
+				$.getJSON('../data/example2.json', function(data) {
 					var items = data.items[question].paragraph;
 					var length = data.items.length;
 
@@ -89,6 +120,9 @@ $(document).ready(function() {
             $('#prev-data').prop('disabled', true);
           } else {
             $('#prev-data').prop('disabled', false);
+						reviewButton.css("display", "none");
+						rightArrow.css("display", "inline-block");
+						rightArrow.removeClass("blue");
           }
 
 				});
@@ -100,7 +134,7 @@ $(document).ready(function() {
 				var id = this.id;
 				Answers[question] = id;
 
-				console.log(Answers);
+				// console.log(Answers);
 			});
 
 			// Function to check if the answer object contains an answer for that question
@@ -129,6 +163,6 @@ $(document).ready(function() {
         }
 
 
-				console.log(Answers);
+				// console.log(Answers);
 			}
     });

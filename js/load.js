@@ -9,6 +9,10 @@ $(document).ready(function() {
 				showCounter.append(question + 1 + " / " + length);
 			});
 
+      if(question == 0) {
+        $('#prev-data').prop('disabled', true);
+      }
+
 
 			$('#next-data').click(function() {
 				question++;
@@ -35,6 +39,12 @@ $(document).ready(function() {
             $('#next-data').prop('disabled', false);
           }
 
+          if(question == 0) {
+            $('#prev-data').prop('disabled', true);
+          } else {
+            $('#prev-data').prop('disabled', false);
+          }
+
 
 				});
 			});
@@ -57,6 +67,12 @@ $(document).ready(function() {
           if (hasAnswer(this, question, Answers) == true) {
             checkAnswer(this, question, Answers);
             $('#next-data').prop('disabled', false);
+          }
+
+          if(question == 0) {
+            $('#prev-data').prop('disabled', true);
+          } else {
+            $('#prev-data').prop('disabled', false);
           }
 
 				});
